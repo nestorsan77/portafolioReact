@@ -1,0 +1,30 @@
+/* src/index.css */
+
+:root {
+    --color-primary: 21 94 117;
+    --color-secondary: 132 204 22;
+    --color-background: 249 250 251;
+    --color-text: 30 41 59;
+  }
+  
+  [data-theme="lime"] {
+    --color-primary: 21 94 117;
+    --color-secondary: 132 204 22;
+    --color-background: 249 250 251;
+    --color-text: 30 41 59;
+  }
+  
+  [data-theme="cyberpunk"] {
+    --color-primary: 255 0 204;
+    --color-secondary: 51 51 255;
+    --color-background: 15 15 15;
+    --color-text: 245 245 245;
+  }
+  
+  [data-theme="sunset"] {
+    --color-primary: 217 119 6;
+    --color-secondary: 245 158 11;
+    --color-background: 255 247 237;
+    --color-text: 31 41 55;
+  }
+  

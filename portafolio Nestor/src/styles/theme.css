@@ -1,0 +1,70 @@
+/* src/styles/theme.css */
+
+:root {
+    --color-primary: 21 94 117;
+    --color-secondary: 132 204 22;
+    --color-background: 249 250 251;
+    --color-text: 30 41 59;
+  }
+  
+  [data-theme="lime"] {
+    --color-primary: 21 94 117;
+    --color-secondary: 132 204 22;
+    --color-background: 249 250 251;
+    --color-text: 30 41 59;
+  }
+  
+  [data-theme="cyberpunk"] {
+    --color-primary: 255 0 204;
+    --color-secondary: 51 51 255;
+    --color-background: 15 15 15;
+    --color-text: 245 245 245;
+  }
+  
+  [data-theme="sunset"] {
+    --color-primary: 217 119 6;
+    --color-secondary: 245 158 11;
+    --color-background: 255 247 237;
+    --color-text: 31 41 55;
+  }
+  
+  /* Asegúrate de tener esto también: */
+  .navbar {
+    background-color: rgb(var(--color-primary));
+    color: white;
+  }
+  
+  .nav-link {
+    color: white;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: rgb(var(--color-secondary));
+  }
+  
+  .theme-circle {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 9999px;
+    border: 2px solid white;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .theme-circle:hover {
+    transform: scale(1.1);
+  }
+  
+  .theme-circle.lime {
+    background-color: #84cc16;
+  }
+  
+  .theme-circle.cyberpunk {
+    background-color: #ff00cc;
+  }
+  
+  .theme-circle.sunset {
+    background-color: #f59e0b;
+  }
+  
