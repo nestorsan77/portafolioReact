@@ -59,23 +59,28 @@ function Navbar() {
             />
           </div>
         </nav>
-
         {/* Mobile Hamburger */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu} className="relative w-8 h-6 group">
+        <div className="md:hidden z-50 relative">
+          <button
+            onClick={toggleMenu}
+            aria-label="Abrir menú"
+            className="relative w-8 h-6 flex flex-col justify-center items-center"
+          >
             <span
-              className={`absolute h-0.5 w-full bg-[rgb(var(--color-text-light))] transition duration-300 ${
-                isOpen ? "rotate-45 top-2.5" : "top-0"
+              className={`absolute h-0.5 w-full bg-[rgb(var(--color-secondary))] rounded transition-all duration-300 ${
+                isOpen
+                  ? "-translate-y-3 opacity-0"
+                  : "-translate-y-2 opacity-100"
               }`}
             />
             <span
-              className={`absolute h-0.5 w-full bg-[rgb(var(--color-text-light))] transition duration-300 ${
-                isOpen ? "opacity-0" : "top-2.5"
+              className={`h-0.5 w-full bg-[rgb(var(--color-secondary))] rounded transition-all duration-300 ${
+                isOpen ? "h-[3px] w-2/3" : ""
               }`}
             />
             <span
-              className={`absolute h-0.5 w-full bg-[rgb(var(--color-text-light))] transition duration-300 ${
-                isOpen ? "-rotate-45 bottom-2.5" : "bottom-0"
+              className={`absolute h-0.5 w-full bg-[rgb(var(--color-secondary))] rounded transition-all duration-300 ${
+                isOpen ? "translate-y-3 opacity-0" : "translate-y-2 opacity-100"
               }`}
             />
           </button>
@@ -83,37 +88,41 @@ function Navbar() {
       </div>
 
       {/* Mobile nav */}
-      {isOpen && (
-        <div className="md:hidden bg-[rgb(var(--color-background))] border-t border-gray-200 px-6 py-8 space-y-4 text-[rgb(var(--color-text))] font-medium">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={toggleMenu}
-              className="block hover:text-[rgb(var(--color-secondary))] transition"
-            >
-              {item.label}
-            </a>
-          ))}
-          <div className="flex space-x-3 pt-4">
-            <button
-              onClick={() => setThemeByName("lime")}
-              className="w-5 h-5 rounded-full bg-[#84cc16] border border-gray-400"
-              title="Lime"
-            />
-            <button
-              onClick={() => setThemeByName("cyberpunk")}
-              className="w-5 h-5 rounded-full bg-[#ff00cc] border border-gray-400"
-              title="Cyberpunk"
-            />
-            <button
-              onClick={() => setThemeByName("sunset")}
-              className="w-5 h-5 rounded-full bg-[#f59e0b] border border-gray-400"
-              title="Sunset"
-            />
-          </div>
+      <div
+        className={`md:hidden absolute top-full left-0 w-full bg-[rgb(var(--color-background))] border-t border-gray-200 px-6 py-8 space-y-4 text-[rgb(var(--color-text))] font-medium transform transition-all duration-300 ease-in-out ${
+          isOpen
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-4 opacity-0 pointer-events-none"
+        }`}
+      >
+        {navItems.map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            onClick={toggleMenu}
+            className="block hover:text-[rgb(var(--color-secondary))] transition"
+          >
+            {item.label}
+          </a>
+        ))}
+        <div className="flex space-x-3 pt-4">
+          <button
+            onClick={() => setThemeByName("lime")}
+            className="w-5 h-5 rounded-full bg-[#84cc16] border border-gray-400"
+            title="Lime"
+          />
+          <button
+            onClick={() => setThemeByName("cyberpunk")}
+            className="w-5 h-5 rounded-full bg-[#ff00cc] border border-gray-400"
+            title="Cyberpunk"
+          />
+          <button
+            onClick={() => setThemeByName("sunset")}
+            className="w-5 h-5 rounded-full bg-[#f59e0b] border border-gray-400"
+            title="Sunset"
+          />
         </div>
-      )}
+      </div>
     </header>
   );
 }
