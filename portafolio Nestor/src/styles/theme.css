@@ -27,6 +27,19 @@
     --color-background: 255 247 237;
     --color-text: 31 41 55;
   }
+
+  [data-theme="hacker"] {
+    --color-primary: 0 0 0;         /* fondo navbar */
+    --color-secondary: 0 255 70;    /* acento, botones */
+    --color-background: 0 10 5;     /* fondo página */
+    --color-text: 0 255 120;        /* texto normal */
+    --color-text-light: 0 255 120;  /* texto en navbar */
+  }
+  
+  .theme-circle.hacker {
+    background-color: #00ff46;
+  }
+  
   
   /* Asegúrate de tener esto también: */
   .navbar {

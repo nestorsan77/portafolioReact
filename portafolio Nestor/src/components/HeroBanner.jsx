@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
 import { motion, useMotionValue, useTransform, useScroll } from "framer-motion";
+import { useThemeStore } from "../store/useThemeStore";
 
 function HeroBanner() {
   const imgRef = useRef(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+  const { theme } = useThemeStore();
 
   const glowStyle = useTransform([mouseX, mouseY], ([x, y]) => {
     return `radial-gradient(300px circle at ${x}px ${y}px, rgba(var(--color-secondary), 0.15), transparent 70%)`;
@@ -30,6 +32,57 @@ function HeroBanner() {
         style={{ backgroundPositionY: bgParallax }}
       >
         <div className="absolute inset-0 bg-[rgb(var(--color-background))]" />
+
+        {theme === "hacker" && (
+          <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
+            {Array.from({ length: 150 }).map((_, i) => {
+              const x = Math.random() * 100;
+              const y = Math.random() * 100;
+              const chars = "01$%#@&*+-";
+              const char = chars[Math.floor(Math.random() * chars.length)];
+              const size = Math.floor(Math.random() * 16) + 10;
+              const baseOpacity = Math.random() * 0.15 + 0.05;
+              const shouldBlink = Math.random() < 0.3; // ~30% parpadean
+              const motionX = (Math.random() - 0.5) * 20;
+              const motionY = (Math.random() - 0.5) * 20;
+
+              return (
+                <motion.span
+                  key={i}
+                  initial={{
+                    x: 0,
+                    y: 0,
+                    opacity: baseOpacity,
+                  }}
+                  animate={{
+                    x: motionX,
+                    y: motionY,
+                    opacity: shouldBlink
+                      ? [baseOpacity, 0, baseOpacity]
+                      : baseOpacity,
+                  }}
+                  transition={{
+                    duration: 3 + Math.random() * 2,
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                    ease: "easeInOut",
+                  }}
+                  className="absolute text-[rgb(0,255,70)] font-mono"
+                  style={{
+                    left: `${x}%`,
+                    top: `${y}%`,
+                    fontSize: `${size}px`,
+                    transform: `rotate(${Math.random() * 360}deg)`,
+                    whiteSpace: "pre",
+                  }}
+                >
+                  {char}
+                </motion.span>
+              );
+            })}
+          </div>
+        )}
+
         <motion.svg
           style={{ y: y1 }}
           className="absolute -top-20 -right-20 w-[600px] h-[600px] opacity-10"
@@ -93,13 +146,35 @@ function HeroBanner() {
               animate={{ opacity: [0.98, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            <motion.img
-              src="/src/assets/img/nestor.png"
-              alt="Foto de Néstor Calderón"
-              className="rounded-full shadow-xl relative z-10"
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.4 }}
-            />
+            <motion.div
+              className={`relative z-10 rounded-full transition-all duration-300 ${
+                theme === "hacker"
+                  ? "p-3 bg-[rgba(0,255,70,0.1)] border-2 border-[rgb(0,255,70)] shadow-[0_0_20px_rgba(0,255,70,0.4)]"
+                  : "p-0"
+              }`}
+            >
+              <motion.div
+                className={`relative z-10 rounded-full transition-all duration-300 ${
+                  theme === "hacker"
+                    ? "pt-2 pb-2 px-3 bg-[rgba(0,255,70,0.08)] border border-[rgb(0,255,70)] shadow-[0_0_20px_rgba(0,255,70,0.4)]"
+                    : ""
+                }`}
+              >
+                <motion.img
+                  src={
+                    theme === "hacker"
+                      ? "/src/assets/img/nestor-hacker.png"
+                      : "/src/assets/img/nestor.png"
+                  }
+                  alt="Foto de Néstor Calderón"
+                  className={`rounded-full w-full h-auto transition-all duration-300 ${
+                    theme === "hacker" ? "scale-110" : ""
+                  }`}
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.4 }}
+                />
+              </motion.div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

@@ -31,7 +31,7 @@ function Footer() {
             <FiGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/tuusuario"
+            href="https://www.linkedin.com/in/nestorsan77"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[rgb(var(--color-secondary))] transition"

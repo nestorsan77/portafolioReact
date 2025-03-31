@@ -19,4 +19,10 @@ export const colorThemes = {
     background: "255 247 237", // #fff7ed
     text: "31 41 55", // #1f2937
   },
+  hacker: {
+    primary: "0 0 0", // black background
+    secondary: "0 255 70", // neon green text & accents (#00FF46)
+    background: "0 10 5", // very dark green/black
+    text: "0 255 120", // light green text (#00FF78)
+  },
 };

@@ -59,6 +59,7 @@ function Navbar() {
             />
           </div>
         </nav>
+
         {/* Mobile Hamburger */}
         <div className="md:hidden z-50 relative">
           <button
@@ -87,42 +88,49 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile nav */}
-      <div
-        className={`md:hidden absolute top-full left-0 w-full bg-[rgb(var(--color-background))] border-t border-gray-200 px-6 py-8 space-y-4 text-[rgb(var(--color-text))] font-medium transform transition-all duration-300 ease-in-out ${
-          isOpen
-            ? "translate-y-0 opacity-100"
-            : "-translate-y-4 opacity-0 pointer-events-none"
-        }`}
-      >
-        {navItems.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
+      {/* Mobile Menu Overlay + Side Panel */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 z-40">
+          {/* Fondo oscuro opaco */}
+          <div
+            className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity duration-300"
             onClick={toggleMenu}
-            className="block hover:text-[rgb(var(--color-secondary))] transition"
-          >
-            {item.label}
-          </a>
-        ))}
-        <div className="flex space-x-3 pt-4">
-          <button
-            onClick={() => setThemeByName("lime")}
-            className="w-5 h-5 rounded-full bg-[#84cc16] border border-gray-400"
-            title="Lime"
-          />
-          <button
-            onClick={() => setThemeByName("cyberpunk")}
-            className="w-5 h-5 rounded-full bg-[#ff00cc] border border-gray-400"
-            title="Cyberpunk"
-          />
-          <button
-            onClick={() => setThemeByName("sunset")}
-            className="w-5 h-5 rounded-full bg-[#f59e0b] border border-gray-400"
-            title="Sunset"
-          />
+          ></div>
+
+          {/* Menú lateral derecho */}
+          <div className="absolute top-0 right-0 w-3/4 max-w-sm h-full bg-[rgb(var(--color-background))] shadow-lg p-6 text-[rgb(var(--color-text))] font-medium transform transition-transform duration-300 ease-in-out translate-x-0">
+            <nav className="space-y-6">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={toggleMenu}
+                  className="block hover:text-[rgb(var(--color-secondary))] transition text-lg"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <div className="flex space-x-3 pt-4">
+                <button
+                  onClick={() => setThemeByName("lime")}
+                  className="w-5 h-5 rounded-full bg-[#84cc16] border border-gray-400"
+                  title="Lime"
+                />
+                <button
+                  onClick={() => setThemeByName("cyberpunk")}
+                  className="w-5 h-5 rounded-full bg-[#ff00cc] border border-gray-400"
+                  title="Cyberpunk"
+                />
+                <button
+                  onClick={() => setThemeByName("sunset")}
+                  className="w-5 h-5 rounded-full bg-[#f59e0b] border border-gray-400"
+                  title="Sunset"
+                />
+              </div>
+            </nav>
+          </div>
         </div>
-      </div>
+      )}
     </header>
   );
 }

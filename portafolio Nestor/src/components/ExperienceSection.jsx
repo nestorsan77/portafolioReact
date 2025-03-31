@@ -5,38 +5,57 @@ import FadeInWhenVisible from "./utils/FadeInWhenVisible";
 
 const experiences = [
   {
-    role: "Desarrollador Frontend",
-    company: "Agencia Creativa XYZ",
-    period: "2023 - Actualidad",
-    description:
-      "Desarrollo de interfaces web responsivas con React y Tailwind.",
+    role: "Desarrollador de Software FullStack",
+    company: "GalagaAgency",
+    period: "2024 - Actualidad",
+    description: "Desarrollo del backend web, aplicaciones móviles y DevOps.",
     fullDescription:
-      "Lideré el rediseño completo de la plataforma de clientes, mejorando la accesibilidad, rendimiento y coherencia visual. Desarrollé un sistema de componentes reutilizables y animé microinteracciones con Framer Motion.",
-    image: "/assets/img/empresa-xyz.jpg",
-    tech: ["React", "Tailwind", "Framer Motion", "API REST"],
+      "Lideré el backend completo de la aplicación PWA de Energía Solar Canarias, mejorando la seguridad, rendimiento y vinculando las apis de monitorización de 8 proveedores. Desarrollé unas automatizaciones con la api de Notion y ZohoCRM manteniendo una estructura de datos.",
+    image: "src/assets/img/galaga.png",
+    tech: [
+      "React",
+      "Tailwind",
+      "PHP",
+      "NodeJS",
+      "Zoho",
+      "Notion",
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
     color: "#0ea5e9",
   },
   {
-    role: "Diseñador Web",
-    company: "Estudio UIUX",
-    period: "2021 - 2023",
-    description:
-      "Diseño de interfaces para productos digitales, prototipado en Figma.",
+    role: "Desarrollador de Aplicaciones",
+    company: "Gyleven",
+    period: "2023 - 2024",
+    description: "Desarrollo de Software y soluciones para empresas a medida.",
     fullDescription:
-      "Participé en más de 25 proyectos diseñando interfaces para ecommerce y apps. Colaboré en sprints ágiles y validaciones de diseño con el equipo de desarrollo.",
-    image: "/assets/img/estudio-uiux.jpg",
+      "Participé en varios proyectos diseñando las plantillas móviles interfaces para ecommerce y apps. Colaboré en sprints ágiles y validaciones de diseño con el equipo de desarrollo.",
+    image: "src/assets/img/gyleven.png",
     tech: ["Figma", "Prototyping", "UX Writing", "CSS Grid"],
     color: "#f59e0b",
   },
   {
-    role: "Prácticas como Desarrollador",
-    company: "Startup ABC",
-    period: "2020 - 2021",
+    role: "Desarrollador Web",
+    company: "Publicidad Mediterránea",
+    period: "2022 - 2023",
     description:
-      "Apoyo en desarrollo de funcionalidades React y mantenimiento de landing pages.",
+      "Desarrollo de webs con WordPress y gestión de dominios en arsys",
     fullDescription:
-      "Mi primer contacto profesional. Trabajé en mejoras de SEO, creación de secciones con componentes funcionales, y aprendí Git colaborando con el equipo.",
-    image: "/assets/img/startup-abc.jpg",
+      "Mi primer contacto profesional. Trabajé en mejoras de SEO, programación de publicaciones de Instagram, Meta y Tik Tok, diseño del footer de la empresa, gestión de correos en Mailchimp y gestión de la seguridad y almacenamiento de la empresa.",
+    image: "src/assets/img/publicidadmediterranea.jpeg",
+    tech: ["React", "Git", "SEO", "HTML"],
+    color: "#10b981",
+  },
+  {
+    role: "Soporte IT",
+    company: "CRACK24",
+    period: "2020 - 2021",
+    description: "Apoyo en el soporte IT de la empresa.",
+    fullDescription:
+      "Mi primer contacto profesional. Mi primer contacto profesional. Trabajé gestionando los servidores de la empresa, dando de alta los clientes en la base de datos y dando soporte a los montadores de alarmas comunicando las mismas por GPRS.",
+    image: "src/assets/img/crack24.png",
     tech: ["React", "Git", "SEO", "HTML"],
     color: "#10b981",
   },
