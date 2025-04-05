@@ -54,7 +54,7 @@ const experiences = [
     period: "2020 - 2021",
     description: "Apoyo en el soporte IT de la empresa.",
     fullDescription:
-      "Mi primer contacto profesional. Mi primer contacto profesional. Trabajé gestionando los servidores de la empresa, dando de alta los clientes en la base de datos y dando soporte a los montadores de alarmas comunicando las mismas por GPRS.",
+      "Mi primer contacto profesional. Trabajé gestionando los servidores de la empresa, dando de alta los clientes en la base de datos y dando soporte a los montadores de alarmas comunicando las mismas por GPRS.",
     image: "src/assets/img/crack24.png",
     tech: ["React", "Git", "SEO", "HTML"],
     color: "#10b981",

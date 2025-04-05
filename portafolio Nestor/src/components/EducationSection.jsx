@@ -1,40 +1,151 @@
 import React from "react";
 import { FiBook, FiAward, FiCheckCircle } from "react-icons/fi";
+import {
+  SiSpringboot,
+  SiKotlin,
+  SiPhp,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiLinux,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiRobotframework,
+  SiRasa,
+} from "react-icons/si";
+import { FaJava, FaWindows } from "react-icons/fa";
 import FadeInWhenVisible from "./utils/FadeInWhenVisible";
 
+// 🧠 Mapeo de tecnologías a iconos
+const getTechIcon = (tech) => {
+  switch (tech.toLowerCase()) {
+    case "java":
+      return <FaJava title="Java" />;
+    case "springboot":
+      return <SiSpringboot title="Spring Boot" />;
+    case "kotlin":
+      return <SiKotlin title="Kotlin" />;
+    case "php":
+      return <SiPhp title="PHP" />;
+    case "javascript":
+      return <SiJavascript title="JavaScript" />;
+    case "html":
+      return <SiHtml5 title="HTML" />;
+    case "css":
+      return <SiCss3 title="CSS" />;
+    case "linux":
+      return <SiLinux title="Linux" />;
+    case "windows server":
+      return <FaWindows title="Windows Server" />;
+    case "node.js":
+    case "nodejs":
+      return <SiNodedotjs title="Node.js" />;
+    case "express":
+      return <SiExpress title="Express" />;
+    case "mongodb":
+      return <SiMongodb title="MongoDB" />;
+    case "rpa":
+      return <SiRobotframework title="RPA" />;
+    case "ia":
+    case "ai":
+      return <SiRasa title="IA" />;
+    default:
+      return <span className="text-xs">{tech}</span>;
+  }
+};
+
+// 🧾 Datos de estudios y cursos
 const formalEducation = [
   {
-    degree: "Máster en Desarrollo Web Full Stack",
-    institution: "Universidad Tecnológica de Madrid",
-    period: "2021 - 2022",
+    degree: "Grado Superior en Desarrollo de Aplicaciones Multiplataforma",
+    institution: "Universidad Internacional de la Rioja (UNIR)",
+    period: "2023 - 2024",
     description:
-      "Especialización en desarrollo frontend/backend con React, Node.js y despliegue en la nube.",
+      "Especialización en desarrollo de aplicaciones móviles con Java, SpringBoot y Kotlin principalmente.",
+    techs: ["Java", "SpringBoot", "Kotlin"],
   },
   {
-    degree: "Grado en Ingeniería Informática",
-    institution: "Universidad de Sevilla",
-    period: "2017 - 2021",
+    degree: "Grado Superior en Desarrollo de Aplicaciones Web",
+    institution: "IES Macia Abela",
+    period: "2021 - 2023",
     description:
-      "Fundamentos sólidos en programación, estructuras de datos y sistemas distribuidos.",
+      "Fundamentos sólidos en programación, Java, PHP, JavaScript, HTML, CSS y bases de datos.",
+    techs: ["Java", "PHP", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    degree: "Grado Medio en Sistemas Microinformáticos y Redes",
+    institution: "IES Macia Abela",
+    period: "2019 - 2021",
+    description:
+      "Especialización en redes, sistemas operativos y hardware. Aprendizaje de Linux y Windows Server.",
+    techs: ["Linux", "Windows Server"],
   },
 ];
 
 const courses = [
   {
-    title: "Curso Profesional de React",
-    provider: "Platzi",
-    period: "2023",
+    title: "Bootcamp Backend con Node.js",
+    provider: "Qualentum",
+    period: "2023 - 2024",
     description:
-      "Componentes, hooks, enrutamiento, contexto y patrones de diseño en React moderno.",
+      "Aprende a desarrollar aplicaciones backend con Node.js, Express y MongoDB. Incluye proyectos prácticos.",
+    techs: ["Node.js", "Express", "MongoDB"],
   },
   {
-    title: "JavaScript Moderno ES6+",
-    provider: "Udemy",
-    period: "2022",
+    title: "Master en Robotic Process Automatication + IA",
+    provider: "NTT Data / EOI",
+    period: "2022 - 2023",
     description:
-      "Domina las características modernas del lenguaje JavaScript, incluyendo async/await, destructuring y más.",
+      "Domina la automatización de procesos con RPA y su integración con IA. Incluye proyectos prácticos.",
+    techs: ["RPA", "IA"],
   },
 ];
+
+function EducationCard({ title, subtitle, period, description, techs }) {
+  return (
+    <div className="relative z-10 bg-[rgb(var(--color-card))] rounded-xl shadow-lg p-6 border border-[rgb(var(--color-border))] group hover:ring-2 hover:ring-[rgb(var(--color-secondary))] transition overflow-visible">
+      {/* Cartas en abanico con hover animado */}
+      <div className="absolute -top-6 -right-8 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out z-50">
+        {techs.map((tech, idx) => {
+          const angle = (idx - (techs.length - 1) / 2) * 12;
+          return (
+            <span
+              key={idx}
+              title={tech}
+              className="text-xl p-2 rounded-lg border border-[rgb(var(--color-border))] bg-white shadow-md transition-all duration-300 ease-out hover:text-white hover:scale-110 hover:shadow-xl"
+              style={{
+                zIndex: 10 + idx,
+                transform: `rotate(${angle}deg) translateX(${idx * -8}px)`,
+                transition: "background-color 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor =
+                  "rgb(var(--color-secondary))";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "white";
+              }}
+            >
+              {getTechIcon(tech)}
+            </span>
+          );
+        })}
+      </div>
+
+      {/* Contenido */}
+      <h4 className="text-xl sm:text-2xl font-bold text-[rgb(var(--color-primary))] mb-1">
+        {title}
+      </h4>
+      <p className="text-sm text-[rgb(var(--color-muted))] mb-2 font-medium">
+        {subtitle} &middot; {period}
+      </p>
+      <p className="text-base text-[rgb(var(--color-text))] leading-relaxed">
+        {description}
+      </p>
+    </div>
+  );
+}
 
 function EducationSection() {
   return (
@@ -65,18 +176,13 @@ function EducationSection() {
                 delay={index * 0.15}
                 direction="left"
               >
-                <div className="relative bg-[rgb(var(--color-card))] rounded-xl shadow-lg p-6 border border-[rgb(var(--color-border))] group hover:ring-2 hover:ring-[rgb(var(--color-secondary))] transition">
-                  <div className="absolute -left-3 top-6 w-6 h-6 bg-[rgb(var(--color-secondary))] rounded-full border-4 border-white group-hover:scale-110 transition-transform" />
-                  <h4 className="text-xl sm:text-2xl font-bold text-[rgb(var(--color-primary))] mb-1">
-                    {item.degree}
-                  </h4>
-                  <p className="text-sm text-[rgb(var(--color-muted))] mb-2 font-medium">
-                    {item.institution} &middot; {item.period}
-                  </p>
-                  <p className="text-base text-[rgb(var(--color-text))] leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
+                <EducationCard
+                  title={item.degree}
+                  subtitle={item.institution}
+                  period={item.period}
+                  description={item.description}
+                  techs={item.techs}
+                />
               </FadeInWhenVisible>
             ))}
           </div>
@@ -93,18 +199,13 @@ function EducationSection() {
         <div className="grid sm:grid-cols-2 gap-8">
           {courses.map((item, index) => (
             <FadeInWhenVisible key={index} delay={index * 0.2} direction="up">
-              <div className="bg-[rgb(var(--color-card))] border border-[rgb(var(--color-border))] rounded-xl p-6 shadow-md hover:shadow-xl transition">
-                <div className="flex items-center gap-2 text-[rgb(var(--color-primary))] font-semibold text-lg mb-1">
-                  <FiCheckCircle className="text-[rgb(var(--color-secondary))]" />
-                  {item.title}
-                </div>
-                <p className="text-sm text-[rgb(var(--color-muted))] mb-2 font-medium">
-                  {item.provider} &middot; {item.period}
-                </p>
-                <p className="text-base text-[rgb(var(--color-text))] leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
+              <EducationCard
+                title={item.title}
+                subtitle={item.provider}
+                period={item.period}
+                description={item.description}
+                techs={item.techs}
+              />
             </FadeInWhenVisible>
           ))}
         </div>

@@ -51,22 +51,40 @@ function App() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
               <ProjectCard
-                title="Proyecto 1"
-                description="Diseño y desarrollo de un sitio web para una empresa de diseño de interiores."
-                image="/assets/img/proyectos/proyecto1.jpg"
-                link="https://github.com/proyecto1"
+                title="Energía Solar Canarias"
+                description="Diseño y desarrollo de una PWA para una empresa de energía solar encargado del backend, desarrollo en kotlin y en swift."
+                image="/src/assets/img/portafolio/esc.webp"
+                link="https://play.google.com/store/apps/details?id=com.galaga.esc_android"
               />
               <ProjectCard
-                title="Proyecto 2"
-                description="Aplicación de seguimiento de tareas con React y Firebase."
-                image="/assets/img/proyectos/proyecto2.jpg"
-                link="https://github.com/proyecto2"
+                title="dosxdos"
+                description="Diseño y desarrollo de una PWA de gestión en conjunto con el CRM para una empresa de diseño de interiores de marcas premium."
+                image="/src/assets/img/portafolio/dosxdos.webp"
+                link="https://play.google.com/store/apps/details?id=com.dosxdos.dosxdos.app"
               />
               <ProjectCard
-                title="Proyecto 3"
-                description="Landing page animada con Framer Motion y GSAP."
-                image="/assets/img/proyectos/proyecto3.jpg"
-                link="https://github.com/proyecto3"
+                title="Activiza"
+                description="Desarrollo de una aplicación en kotlin para la gestión de los entrenamientos y de rutinas de los usuarios en los gimnasios."
+                image="/src/assets/img/portafolio/activiza.gif"
+                link="https://github.com/TFCUNIRFP-NDD/Frontend-activiza/blob/main/Activiza-proyect.pdf"
+              />
+              <ProjectCard
+                title="Games&Doc"
+                description="Diseño y desarrollo de una web Blog de noticias de videojuegos y tecnología, con PHP y JavaScript."
+                image="/src/assets/img/portafolio/gamesdoc.gif"
+                link="https://gamesanddoc.000webhostapp.com/body.php"
+              />
+              <ProjectCard
+                title="El juego del minotauro"
+                description="Desarrollo y creación de un Videojuego en 2D desarrollado con Unity y C# para PC."
+                image="/src/assets/img/portafolio/minotaur.gif"
+                link="https://mega.nz/file/wRMTDAiR#J98TyCh2kVqxVzQXXVeglwl-qn2AhhvjibIhX0r1QDE"
+              />
+              <ProjectCard
+                title="Piedra, Papel, Tijeras, lagarto, Spock"
+                description="Desarrollo de un juego en JavaScript de piedra, papel, tijeras, lagarto y Spock."
+                image="/src/assets/img/portafolio/piedra-papel-tijeras.gif"
+                link="https://github.com/GDAM-PSP/AE1-Juego-piedra-papel-o-tijeras"
               />
             </div>
           </section>
