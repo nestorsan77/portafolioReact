@@ -1,4 +1,6 @@
+# ----------------------------------------
 # Logs
+# ----------------------------------------
 logs
 *.log
 npm-debug.log*
@@ -7,15 +9,30 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# ----------------------------------------
+# Dependencies
+# ----------------------------------------
+node_modules/
 
-# Editor directories and files
+# ----------------------------------------
+# Build output
+# ----------------------------------------
+dist/
+dist-ssr/
+
+# ----------------------------------------
+# Local environment files
+# ----------------------------------------
+.env
+.env.local
+.env.*.local
+
+# ----------------------------------------
+# Editor & IDE config
+# ----------------------------------------
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
@@ -23,16 +40,9 @@ dist-ssr
 *.sln
 *.sw?
 
-# .gitignore
-.env.local
-# Ignora node_modules
-node_modules/
-
-# Ignora archivos de lock si usas npm
+# ----------------------------------------
+# Package manager lockfiles
+# ----------------------------------------
 package-lock.json
-
-# Ignora archivos de lock si usas yarn
 yarn.lock
-
-# Ignora salida del build
-dist/
+pnpm-lock.yaml
