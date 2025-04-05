@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Lottie from "lottie-react";
-import laptopAnimation from "../../assets/lottie/laptop.json";
+import laptopAnimation from "/public/assets/lottie/laptop.json";
 import { useThemeStore } from "../../store/useThemeStore";
 
 function FloatingLaptop() {
@@ -44,7 +44,7 @@ function FloatingLaptop() {
   }, [scrollY, isMobile]);
 
   const playSound = () => {
-    const audio = new Audio("/src/assets/sounds/click.mp3"); // asegúrate de que esté en public/sounds
+    const audio = new Audio("/assets/sounds/click.mp3"); // asegúrate de que esté en public/sounds
     audio.volume = 0.4;
     audio.play();
   };

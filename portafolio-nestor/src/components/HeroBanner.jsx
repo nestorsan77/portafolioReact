@@ -163,8 +163,8 @@ function HeroBanner() {
                 <motion.img
                   src={
                     theme === "hacker"
-                      ? "/src/assets/img/nestor-hacker.png"
-                      : "/src/assets/img/nestor.png"
+                      ? "/assets/img/nestor-hacker.png"
+                      : "/assets/img/nestor.png"
                   }
                   alt="Foto de Néstor Calderón"
                   className={`rounded-full w-full h-auto transition-all duration-300 ${

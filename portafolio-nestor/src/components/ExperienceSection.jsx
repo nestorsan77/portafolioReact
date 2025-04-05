@@ -11,7 +11,7 @@ const experiences = [
     description: "Desarrollo del backend web, aplicaciones móviles y DevOps.",
     fullDescription:
       "Lideré el backend completo de la aplicación PWA de Energía Solar Canarias, mejorando la seguridad, rendimiento y vinculando las apis de monitorización de 8 proveedores. Desarrollé unas automatizaciones con la api de Notion y ZohoCRM manteniendo una estructura de datos.",
-    image: "src/assets/img/galaga.png",
+    image: "/assets/img/galaga.png",
     tech: [
       "React",
       "Tailwind",
@@ -32,7 +32,7 @@ const experiences = [
     description: "Desarrollo de Software y soluciones para empresas a medida.",
     fullDescription:
       "Participé en varios proyectos diseñando las plantillas móviles interfaces para ecommerce y apps. Colaboré en sprints ágiles y validaciones de diseño con el equipo de desarrollo.",
-    image: "src/assets/img/gyleven.png",
+    image: "/assets/img/gyleven.png",
     tech: ["Figma", "Prototyping", "UX Writing", "CSS Grid"],
     color: "#f59e0b",
   },
@@ -44,7 +44,7 @@ const experiences = [
       "Desarrollo de webs con WordPress y gestión de dominios en arsys",
     fullDescription:
       "Mi primer contacto profesional. Trabajé en mejoras de SEO, programación de publicaciones de Instagram, Meta y Tik Tok, diseño del footer de la empresa, gestión de correos en Mailchimp y gestión de la seguridad y almacenamiento de la empresa.",
-    image: "src/assets/img/publicidadmediterranea.jpeg",
+    image: "/assets/img/publicidadmediterranea.jpeg",
     tech: ["React", "Git", "SEO", "HTML"],
     color: "#10b981",
   },
@@ -55,7 +55,7 @@ const experiences = [
     description: "Apoyo en el soporte IT de la empresa.",
     fullDescription:
       "Mi primer contacto profesional. Trabajé gestionando los servidores de la empresa, dando de alta los clientes en la base de datos y dando soporte a los montadores de alarmas comunicando las mismas por GPRS.",
-    image: "src/assets/img/crack24.png",
+    image: "/assets/img/crack24.png",
     tech: ["React", "Git", "SEO", "HTML"],
     color: "#10b981",
   },
