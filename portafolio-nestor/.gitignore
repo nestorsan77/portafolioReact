@@ -25,3 +25,14 @@ dist-ssr
 
 # .gitignore
 .env.local
+# Ignora node_modules
+node_modules/
+
+# Ignora archivos de lock si usas npm
+package-lock.json
+
+# Ignora archivos de lock si usas yarn
+yarn.lock
+
+# Ignora salida del build
+dist/
