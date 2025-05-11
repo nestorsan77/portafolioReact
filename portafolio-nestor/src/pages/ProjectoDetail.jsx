@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import projects from "../data/projects";
 import Navbar from "../components/Navbar";
@@ -53,6 +54,10 @@ function ProjectDetail() {
   const navigate = useNavigate();
   const decodedTitle = decodeURIComponent(titulo);
   const project = projects.find((p) => p.title === decodedTitle);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   if (!project) {
     return (

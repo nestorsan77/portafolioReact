@@ -6,9 +6,9 @@ const projects = [
       "Diseño y desarrollo de una PWA para una empresa de energía solar encargado del backend, desarrollo en kotlin y en swift. Se priorizó la eficiencia energética, la sincronización online y la escalabilidad del sistema.",
     image: "/assets/img/portafolio/esc.webp",
     gallery: [
-      "/assets/img/portafolio/esc_1.webp",
-      "/assets/img/portafolio/esc_2.webp",
-      "/assets/img/portafolio/esc_3.webp",
+      "/assets/img/esc-1.png",
+      "/assets/img/esc-2.png",
+      "/assets/img/esc-3.png",
     ],
     link: "https://play.google.com/store/apps/details?id=com.galaga.esc_android",
     year: 2025,
@@ -51,10 +51,7 @@ const projects = [
     description:
       "Diseño y desarrollo de una PWA de gestión en conjunto con el CRM para una empresa de diseño de interiores de marcas premium. Integración completa con workflows administrativos.",
     image: "/assets/img/portafolio/dosxdos.webp",
-    gallery: [
-      "/assets/img/portafolio/dosxdos_1.webp",
-      "/assets/img/portafolio/dosxdos_2.webp",
-    ],
+    gallery: ["/assets/img/dosxdos-1.png", "/assets/img/dosxdos-2.png"],
     link: "https://play.google.com/store/apps/details?id=com.dosxdos.dosxdos.app",
     year: 2024,
     type: "WebApp de gestión empresarial (CRM + PWA)",
@@ -95,10 +92,7 @@ const projects = [
     description:
       "Desarrollo de una app para la gestión de entrenamientos en gimnasios. Pensada para coaches personales, permite personalizar rutinas y registrar avances físicos, integrando lógica de progresión personalizada y seguimiento gráfico.",
     image: "/assets/img/portafolio/activiza.gif",
-    gallery: [
-      "/assets/img/portafolio/activiza_1.webp",
-      "/assets/img/portafolio/activiza_2.webp",
-    ],
+    gallery: ["/assets/img/portafolio/activiza.gif"],
     link: "https://github.com/TFCUNIRFP-NDD/Frontend-activiza/blob/main/Activiza-proyect.pdf",
     year: 2024,
     type: "App nativa Android",
@@ -127,10 +121,7 @@ const projects = [
     description:
       "Blog técnico de videojuegos y cultura digital con sistema propio de publicación. Incluye zona de administración, control editorial básico, gestión de usuarios, y sección de reseñas con etiquetas dinámicas.",
     image: "/assets/img/portafolio/gamesdoc.gif",
-    gallery: [
-      "/assets/img/portafolio/gamesdoc_1.webp",
-      "/assets/img/portafolio/gamesdoc_2.webp",
-    ],
+    gallery: ["/assets/img/portafolio/gamesdoc.gif"],
     link: "https://gamesanddoc.000webhostapp.com/body.php",
     year: 2021,
     type: "Blog estático con panel de administración",
@@ -160,10 +151,7 @@ const projects = [
     description:
       "Desarrollo y creación de un videojuego en 2D para PC, inspirado en juegos de nintendo NES clásica. Incluye sistema de niveles progresivos, enemigos dinámicos y sistema IA en estos. El proyecto se enfocó en el ciclo completo de desarrollo de 1 nivel en el videojuego con boss final, desde diseño de niveles hasta compilación final ejecutable.",
     image: "/assets/img/portafolio/minotaur.gif",
-    gallery: [
-      "/assets/img/portafolio/minotaur_1.webp",
-      "/assets/img/portafolio/minotaur_2.webp",
-    ],
+    gallery: ["/assets/img/portafolio/minotaur.gif"],
     link: "https://mega.nz/file/wRMTDAiR#J98TyCh2kVqxVzQXXVeglwl-qn2AhhvjibIhX0r1QDE",
     year: 2024,
     type: "Videojuego 2D para PC",
@@ -192,10 +180,7 @@ const projects = [
     description:
       "Desarrollo de un juego en JavaScript de piedra, papel, tijeras, lagarto y Spock con animaciones ligeras y lógica personalizada. El objetivo principal fue aprender estructuras condicionales complejas y manipulación del DOM en tiempo real.",
     image: "/assets/img/portafolio/piedra-papel-tijeras.gif",
-    gallery: [
-      "/assets/img/portafolio/pptls_1.webp",
-      "/assets/img/portafolio/pptls_2.webp",
-    ],
+    gallery: ["/assets/img/portafolio/piedra-papel-tijeras.gif"],
     link: "https://github.com/GDAM-PSP/AE1-Juego-piedra-papel-o-tijeras",
     year: 2024,
     type: "Juego de navegador",
