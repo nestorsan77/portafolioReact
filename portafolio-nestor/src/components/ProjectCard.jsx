@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import FadeInWhenVisible from "./utils/FadeInWhenVisible";
 
-function ProjectCard({ title, description, image, delay = 0 }) {
+function ProjectCard({ title, description, image, delay = 0, real = false }) {
   return (
     <FadeInWhenVisible delay={delay} direction="up">
       <Link to={`/proyecto/${encodeURIComponent(title)}`}>
@@ -17,6 +18,12 @@ function ProjectCard({ title, description, image, delay = 0 }) {
         >
           {/* Imagen */}
           <div className="relative h-48 overflow-hidden rounded-xl mb-4">
+            {real && (
+              <span className="absolute top-2 left-2 z-10 bg-[rgb(var(--color-secondary))] text-white text-xs font-bold px-2 py-1 rounded-md shadow">
+                PROYECTO REAL
+              </span>
+            )}
+
             <motion.img
               src={image}
               alt={title}

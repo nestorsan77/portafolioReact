@@ -7,19 +7,29 @@ import {
   FiSend,
   FiCheckCircle,
 } from "react-icons/fi";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import FadeInWhenVisible from "./utils/FadeInWhenVisible";
 
 const contactLinks = [
-  { icon: <FiMail />, text: "Email", href: "mailto:tucorreo@example.com" },
+  { icon: <FiMail />, text: "Email", href: "mailto:nestorsan77@gmail.com" },
   {
     icon: <FiLinkedin />,
     text: "LinkedIn",
-    href: "https://www.linkedin.com/in/tuusuario",
+    href: "https://www.linkedin.com/in/nestor-calderon-perez-895034270/",
   },
-  { icon: <FiGithub />, text: "GitHub", href: "https://github.com/tuusuario" },
-  { icon: <FiDownload />, text: "CV", href: "/cv.pdf", download: true },
+  {
+    icon: <FiGithub />,
+    text: "GitHub",
+    href: "https://github.com/nestorsan77",
+  },
+  {
+    icon: <FiDownload />,
+    text: "CV",
+    href: "assets/pdf/cv-2025.pdf",
+    download: true,
+  },
 ];
 
 function Contact() {

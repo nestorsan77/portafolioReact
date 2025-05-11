@@ -59,6 +59,7 @@ function Home() {
                   image={project.image}
                   link={project.link}
                   delay={index * 0.15}
+                  real={project.real}
                 />
               ))}
             </div>

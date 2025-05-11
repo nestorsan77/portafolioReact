@@ -1,6 +1,7 @@
 const projects = [
   {
     title: "Energía Solar Canarias",
+    real: true,
     description:
       "Diseño y desarrollo de una PWA para una empresa de energía solar encargado del backend, desarrollo en kotlin y en swift. Se priorizó la eficiencia energética, la sincronización offline y la escalabilidad del sistema.",
     image: "/assets/img/portafolio/esc.webp",
@@ -42,6 +43,7 @@ const projects = [
   },
   {
     title: "dosxdos",
+    real: true,
     description:
       "Diseño y desarrollo de una PWA de gestión en conjunto con el CRM para una empresa de diseño de interiores de marcas premium. Integración completa con workflows administrativos.",
     image: "/assets/img/portafolio/dosxdos.webp",
@@ -82,6 +84,7 @@ const projects = [
   },
   {
     title: "Activiza",
+    real: false,
     description:
       "Desarrollo de una app para la gestión de entrenamientos en gimnasios. Pensada para coaches personales, permite personalizar rutinas y registrar avances físicos, integrando lógica de progresión personalizada y seguimiento gráfico.",
     image: "/assets/img/portafolio/activiza.gif",
@@ -113,6 +116,7 @@ const projects = [
   },
   {
     title: "Games&Doc",
+    real: false,
     description:
       "Blog técnico de videojuegos y cultura digital con sistema propio de publicación. Incluye zona de administración, control editorial básico, gestión de usuarios, y sección de reseñas con etiquetas dinámicas.",
     image: "/assets/img/portafolio/gamesdoc.gif",
@@ -145,6 +149,7 @@ const projects = [
   },
   {
     title: "El juego del minotauro",
+    real: false,
     description:
       "Desarrollo y creación de un videojuego en 2D para PC, inspirado en mitología clásica. Incluye sistema de niveles progresivos, enemigos dinámicos y lógica de laberinto. El proyecto se enfocó en el ciclo completo de desarrollo de videojuegos, desde diseño de niveles hasta compilación final ejecutable.",
     image: "/assets/img/portafolio/minotaur.gif",
@@ -176,6 +181,7 @@ const projects = [
   },
   {
     title: "Piedra, Papel, Tijeras, lagarto, Spock",
+    real: false,
     description:
       "Desarrollo de un juego en JavaScript de piedra, papel, tijeras, lagarto y Spock con animaciones ligeras y lógica personalizada. El objetivo principal fue aprender estructuras condicionales complejas y manipulación del DOM en tiempo real.",
     image: "/assets/img/portafolio/piedra-papel-tijeras.gif",
