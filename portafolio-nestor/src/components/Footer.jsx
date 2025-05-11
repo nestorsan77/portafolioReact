@@ -40,7 +40,7 @@ function Footer() {
             <FiLinkedin />
           </a>
           <a
-            href="https://portfolio.com"
+            href="https://nestorcalderon.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[rgb(var(--color-secondary))] transition"

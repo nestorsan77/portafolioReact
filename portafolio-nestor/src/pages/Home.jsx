@@ -8,6 +8,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import ProjectCard from "../components/ProjectCard";
 import projects from "../data/projects";
+import { useIsDesktop } from "../components/utils/UseIsDesktop";
 
 // 🎯 Cursor personalizado
 import CursorFollower from "../components/decoration/CursorFollower";
@@ -15,13 +16,14 @@ import CursorFollower from "../components/decoration/CursorFollower";
 import FloatingLaptop from "../components/decoration/FloatingLaptop";
 
 function Home() {
+  const isDesktop = useIsDesktop(); // 👈 hook para detectar escritorio
   return (
     <div className="min-h-screen bg-[rgb(var(--color-background))] flex flex-col text-[rgb(var(--color-text))] relative">
       {/* 🌐 Navbar */}
       <Navbar />
 
-      {/* 🌟 Cursor visual */}
-      <CursorFollower />
+      {/* 🌟 Cursor visual (solo escritorio) */}
+      {isDesktop && <CursorFollower />}
 
       {/* 💻 Laptop flotante */}
       <FloatingLaptop />

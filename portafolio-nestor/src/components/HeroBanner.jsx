@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion, useMotionValue, useTransform, useScroll } from "framer-motion";
 import { useThemeStore } from "../store/useThemeStore";
 
@@ -113,10 +114,12 @@ function HeroBanner() {
             </span>
           </h1>
           <p className="text-lg sm:text-xl mb-6 max-w-xl">
-            Desarrollador web enfocado en crear experiencias digitales con alma.
-            Apasionado del código limpio, la animación con propósito y el diseño
-            funcional. Transformo ideas en interfaces vivas con React, Tailwind
-            y Framer Motion.
+            Desarrollador backend apasionado por construir sistemas robustos,
+            escalables y elegantes. Me especializo en transformar lógica
+            compleja en soluciones eficientes mediante Java, Spring Boot y
+            tecnologías afines. Disfruto diseñar arquitecturas limpias, APIs
+            bien estructuradas y flujos de datos que simplemente funcionan. Cada
+            línea de código busca rendimiento, claridad y propósito.
           </p>
           <motion.a
             href="#projects"
