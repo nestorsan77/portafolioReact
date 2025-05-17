@@ -33,7 +33,7 @@ function MobileHackerShake() {
       chargingAudioRef.current.pause();
       chargingAudioRef.current.currentTime = 0;
     } catch (e) {
-      console.warn("No se pudo desbloquear el audio:", e);
+      console.warn("No se pudo desbloquear el audio de carga:", e);
     }
   };
 
@@ -75,6 +75,20 @@ function MobileHackerShake() {
   };
 
   useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
     if (permissionGranted) {
       initializeAudio();
     }
@@ -114,7 +128,6 @@ function MobileHackerShake() {
           newProgress = Math.max(prev - 2, 0);
         }
 
-        // Control sonido
         if (chargingAudioRef.current) {
           if (newProgress > 0 && chargingAudioRef.current.paused) {
             chargingAudioRef.current.currentTime = 0;
@@ -152,7 +165,6 @@ function MobileHackerShake() {
       if (response === "granted") {
         window.addEventListener("devicemotion", handleShakeMotion);
         setPermissionGranted(true);
-        localStorage.setItem("motion-permission", "granted");
         await initializeAudio();
       } else {
         alert("Permiso de sensor no concedido");
@@ -161,43 +173,6 @@ function MobileHackerShake() {
       console.error("Error al pedir permiso de movimiento:", err);
     }
   };
-
-  useEffect(() => {
-    const checkPermission = async () => {
-      setIsMobile(window.innerWidth <= 768);
-
-      if (
-        typeof DeviceMotionEvent !== "undefined" &&
-        typeof DeviceMotionEvent.requestPermission === "function"
-      ) {
-        try {
-          const permission = await DeviceMotionEvent.requestPermission();
-          if (permission === "granted") {
-            window.addEventListener("devicemotion", handleShakeMotion);
-            setPermissionGranted(true);
-          } else {
-            setPermissionGranted(false);
-          }
-        } catch (err) {
-          console.warn("No se pudo comprobar permiso de sensor:", err);
-          setPermissionGranted(false);
-        }
-      } else {
-        window.addEventListener("devicemotion", handleShakeMotion);
-        setPermissionGranted(true);
-      }
-    };
-
-    checkPermission();
-
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("devicemotion", handleShakeMotion);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <>
