@@ -14,6 +14,8 @@ import { useIsDesktop } from "../components/utils/UseIsDesktop";
 import CursorFollower from "../components/decoration/CursorFollower";
 // 💻 Laptop flotante animada
 import FloatingLaptop from "../components/decoration/FloatingLaptop";
+// 💻 Activar modo hacker
+import MobileHackerShake from "../components/decoration/MobileHackerShake"; // 👈
 
 function Home() {
   const isDesktop = useIsDesktop(); // 👈 hook para detectar escritorio
@@ -27,6 +29,9 @@ function Home() {
 
       {/* 💻 Laptop flotante */}
       <FloatingLaptop />
+
+      {/* 🚀 Activador de modo hacker por agitación (solo móvil) */}
+      <MobileHackerShake />
 
       {/* 🎯 Hero / Banner Principal */}
       <HeroBanner />

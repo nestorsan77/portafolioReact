@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion, useScroll, useTransform } from "framer-motion";
 import Lottie from "lottie-react";
 import laptopAnimation from "/public/assets/lottie/laptop.json";
